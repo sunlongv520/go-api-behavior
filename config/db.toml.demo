@@ -1,0 +1,15 @@
+[rabbitmq_ichunt]
+queue_name="ichunt_monitor_user_behavior"
+routing_key="ichunt_monitor_user_behavior"
+exchange="ichunt_monitor_behavior"
+type="direct"
+dns="amqp://guest:guest@192.168.2.232:5672/"
+
+[mongodb_databases]
+dns="mongodb://ichunt:huntmon6699@192.168.1.237:27017/ichunt?authMechanism=SCRAM-SHA-1"
+databases="ichunt"
+collection="monitor_log"
+
+[logSaveConfig]
+time=10
+length=100
